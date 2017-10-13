@@ -1,31 +1,7 @@
 module.exports = {
-  splitInput: function(value) {
-		let arr = [];
-
-		if (value.length === 1) {
-			console.log('length equals 1');
-			arr[0] = value;
-			arr[1] = value;
-		}
-		
-		if (value.length === 2) {
-			console.log('length equals 2');
-			arr[0] = value.substring(0, 1);
-			arr[1] = value.substring(1, 2);
-		}
-		
-		if (value.length === 3) {
-			console.log('length equals 3');
-			arr[0] = value.substring(0, 1);
-			arr[1] = value.substring(1, 2);
-			arr[2] = value.substring(2, 3);
-		}
-
-		return arr;
-	},
 	isVocal: function(val) {
 		const vocals = ['A', 'Ä', 'E', 'I', 'O', 'Ö', 'U', 'Ü'];
-		
+
 		return vocals.indexOf(val) === -1 ? false : true;
 	},
 	splitValue: function(val) {
@@ -37,16 +13,16 @@ module.exports = {
 	changeOne: function(startArr, val) {
 		let isVocal = this.isVocal(val);
 
-		if (isVocal) { 
+		if (isVocal) {
 			startArr[1] = val;
 			startArr[9] = val;
-		} else { 
+		} else {
 			startArr[0] = val;
 			startArr[8] = val;
 		}
 	},
 	changeTwo: function(startArr, valArr) {
-		valArr.map((val, i) => { 
+		valArr.map((val, i) => {
 			let isVocal = this.isVocal(val);
 
 			if (i === 0) {
@@ -65,10 +41,10 @@ module.exports = {
 			let isVocal = this.isVocal(val);
 
 			if (i === 0) {
-				if (isVocal) { 
+				if (isVocal) {
 					startArr[1] = val;
 					first = true;
-				} else { 
+				} else {
 					startArr[0] = val;
 				}
 			}
@@ -76,8 +52,8 @@ module.exports = {
 			if (i === 1) {
 				if (isVocal && !first) {
 					startArr[1] = val;
-				} 
-				if (isVocal && first) { 
+				}
+				if (isVocal && first) {
 					startArr[4] = val;
 				}
 				if (!isVocal && !first) {

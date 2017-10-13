@@ -1,22 +1,43 @@
-import { assert } from 'chai';
-import awesomeFunction from '../src/awesomeModule';
+import { assert, expect } from 'chai';
+import * as tools from '../src/tools';
 
-describe('Describe an awesome test.', () => {
+describe('Tests for tools.isVocal-function.', () => {
 
-  it('1 puls 1 should be 2', () => {
-    assert(awesomeFunction(1, 1) === 2, 'Not awesome :(');
+  it('A should be a vocal', () => {
+    let vocal = tools.isVocal('A');
+
+    assert.isTrue(vocal, 'There is something going wrong ...');
   });
 
-  it('1 plus 2 should be 3', () => {
-    assert(awesomeFunction(1, 2) === 3, 'Not so awesome :(');
+  it('B should be no vocal', () => {
+    let vocal = tools.isVocal('B');
+
+    assert.isNotTrue(vocal, 'There is something going wrong ...');
   });
 
 });
 
-describe('Describe an other awesome test.', () => {
+describe('Tests for tools.splitValue-function.', () => {
 
-  it('1 plus 2 should be 3', () => {
-    assert(awesomeFunction(1, 2) === 3, 'Not so awesome :(');
+  it('A should be an array ["A"]', () => {
+    let inVal = tools.splitValue('A');
+    let outVal = ['A'];
+
+    expect(inVal).to.have.all.members(outVal);
+  });
+
+  it('AB should be an array ["A", "B"]', () => {
+    let inVal = tools.splitValue('AB');
+    let outVal = ['A','B'];
+
+    expect(inVal).to.have.all.members(outVal);
+  });
+
+  it('ABC should be an array ["A", "B", "C"]', () => {
+    let inVal = tools.splitValue('ABC');
+    let outVal = ['A','B', 'C'];
+
+    expect(inVal).to.have.all.members(outVal);
   });
 
 });
