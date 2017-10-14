@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+
 console.log('----------------------------------------');
 console.log('WINSEN (LUHE)');
 
@@ -12,7 +14,7 @@ prompts.question(question, (value) => {
   const start = 'WINSEN (LUHE)';
   const stop = tools.getStop(start, val);
 
-  console.log('RESULT =>', stop);
+  console.log('RESULT =>: %s', stop);
   console.log('----------------------------------------');
 
   process.exit();

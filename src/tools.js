@@ -4,8 +4,11 @@ module.exports = {
 
     return vocals.indexOf(val) >= 0;
   },
+
   splitValue: val => val.split(''),
+
   joinValue: val => val.join(''),
+
   changeOne(startArr, val) {
     const isVocal = this.isVocal(val);
     const newArray = startArr;
@@ -20,6 +23,7 @@ module.exports = {
 
     return newArray;
   },
+
   changeTwo(startArr, valArr) {
     const newArray = startArr;
 
@@ -45,6 +49,7 @@ module.exports = {
       return newArray;
     });
   },
+
   changeThree(startArr, valArr) {
     const newArray = startArr;
     let first = false;
@@ -87,6 +92,7 @@ module.exports = {
       return newArray;
     });
   },
+
   getStop(start, val) {
     const startArr = this.splitValue(start);
     const valArr = this.splitValue(val);

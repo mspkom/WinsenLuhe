@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Lustiges Nummernschild-Spiel zur Entschlüsselung von Deutschen Auto-Nummernschildern.",
   "main": "/lib/index.js",
-  "scripts": {
-    "test": "test"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mspkom/WinsenLuhe.git"
