@@ -20,6 +20,8 @@ module.exports = {
 			startArr[0] = val;
 			startArr[8] = val;
 		}
+
+    return startArr;
 	},
 	changeTwo: function(startArr, valArr) {
 		valArr.map((val, i) => {
@@ -32,6 +34,8 @@ module.exports = {
 			if (i === 1) {
 				if (isVocal) { startArr[9] = val } else { startArr[8] = val }
 			}
+
+    return startArr;
 		});
 	},
 	changeThree: function(startArr, valArr) {
@@ -67,6 +71,8 @@ module.exports = {
 			if (i === 2) {
 				if (isVocal) { startArr[9] = val } else { startArr[8] = val }
 			}
+
+      return startArr;
 		});
 	},
 	getStop: function(start, val) {
@@ -86,7 +92,7 @@ module.exports = {
 		}
 
 		if (val.length > 3) {
-			return 'Eingabe zu lang. MAX 3 Buchstaben.';
+			return 'Eingabe zu lang.';
 		}
 
 		start = this.joinValue(startArr);
