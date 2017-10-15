@@ -2,6 +2,6 @@ var tools = require('../lib/tools');
 
 const start = 'WINSEN (LUHE)';
 const input = 'A';
-const stop = tools.getStop(start, input);
+const output = tools.getStop(start, input);
 
-console.log(stop);
+console.log(input , '=>', output);
