@@ -93,7 +93,7 @@ module.exports = {
     });
   },
 
-  getStop(start, val) {
+  getWinsenLuhe(start, val) {
     const startArr = this.splitValue(start);
     const valArr = this.splitValue(val);
 

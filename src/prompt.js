@@ -10,11 +10,11 @@ const prompts = rl.createInterface(process.stdin, process.stdout);
 const question = 'Nummernschild: ';
 
 prompts.question(question, (value) => {
-  const val = value.toUpperCase();
-  const start = 'WINSEN (LUHE)';
-  const stop = tools.getStop(start, val);
+  const input = value.toUpperCase();
+  const base = 'WINSEN (LUHE)';
+  const result = tools.getWinsenLuhe(base, input);
 
-  console.log('RESULT =>: %s', stop);
+  console.log('RESULT =>: %s', result);
   console.log('----------------------------------------');
 
   process.exit();
