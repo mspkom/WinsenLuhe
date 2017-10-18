@@ -67,114 +67,114 @@ describe('Tests for tools.joinValue-function.', () => {
 
 });
 
-describe('Tests for tools.getStop-function for single input.', () => {
+describe('Tests for tools.getWinsenLuhe-function for single input.', () => {
 
   it('A should be LANSEN (WAHE)', () => {
     const props = ['WINSEN (LUHE)', 'A', 'WANSEN (LAHE)'];
-    const test = tools.getStop(props[0], props[1]);
+    const test = tools.getWinsenLuhe(props[0], props[1]);
 
     assert.equal(test, props[2], 'There is something going wrong ...');
   });
 
   it('K should be KINSEN (KUHE)', () => {
     const props = ['WINSEN (LUHE)', 'K', 'KINSEN (KUHE)'];
-    const test = tools.getStop(props[0], props[1]);
+    const test = tools.getWinsenLuhe(props[0], props[1]);
 
     assert.equal(test, props[2], 'There is something going wrong ...');
   });
 
 });
 
-describe('Tests for tools.getStop-function for double input.', () => {
+describe('Tests for tools.getWinsenLuhe-function for double input.', () => {
 
   it('AA should be LANSEN (WAHE)', () => {
     const props = ['WINSEN (LUHE)', 'AA', 'WANSEN (LAHE)'];
-    const test = tools.getStop(props[0], props[1]);
+    const test = tools.getWinsenLuhe(props[0], props[1]);
 
     assert.equal(test, props[2], 'There is something going wrong ...');
   });
 
   it('KK should be KINSEN (KUHE)', () => {
     const props = ['WINSEN (LUHE)', 'KK', 'KINSEN (KUHE)'];
-    const test = tools.getStop(props[0], props[1]);
+    const test = tools.getWinsenLuhe(props[0], props[1]);
 
     assert.equal(test, props[2], 'There is something going wrong ...');
   });
 
   it('OÖ should be LONSEN (WÖHE)', () => {
     const props = ['WINSEN (LUHE)', 'OÖ', 'WONSEN (LÖHE)'];
-    const test = tools.getStop(props[0], props[1]);
+    const test = tools.getWinsenLuhe(props[0], props[1]);
 
     assert.equal(test, props[2], 'There is something going wrong ...');
   });
 
   it('OK should be WONSEN (KUHE)', () => {
     const props = ['WINSEN (LUHE)', 'OK', 'WONSEN (KUHE)'];
-    const test = tools.getStop(props[0], props[1]);
+    const test = tools.getWinsenLuhe(props[0], props[1]);
 
     assert.equal(test, props[2], 'There is something going wrong ...');
   });
 
   it('KO should be KINSEN (LOHE)', () => {
     const props = ['WINSEN (LUHE)', 'KO', 'KINSEN (LOHE)'];
-    const test = tools.getStop(props[0], props[1]);
+    const test = tools.getWinsenLuhe(props[0], props[1]);
 
     assert.equal(test, props[2], 'There is something going wrong ...');
   });
 
 });
 
-describe('Tests for tools.getStop-function for tripple input.', () => {
+describe('Tests for tools.getWinsenLuhe-function for tripple input.', () => {
 
   it('AAA should be LANSAN (WAHE)', () => {
     const props = ['WINSEN (LUHE)', 'AAA', 'WANSAN (LAHE)'];
-    const test = tools.getStop(props[0], props[1]);
+    const test = tools.getWinsenLuhe(props[0], props[1]);
 
     assert.equal(test, props[2], 'There is something going wrong ...');
   });
 
   it('AKA should be WAKSEN (LAHE)', () => {
     const props = ['WINSEN (LUHE)', 'AKA', 'WAKSEN (LAHE)'];
-    const test = tools.getStop(props[0], props[1]);
+    const test = tools.getWinsenLuhe(props[0], props[1]);
 
     assert.equal(test, props[2], 'There is something going wrong ...');
   });
 
   it('AAK should be WANSAN (KUHE)', () => {
     const props = ['WINSEN (LUHE)', 'AAK', 'WANSAN (KUHE)'];
-    const test = tools.getStop(props[0], props[1]);
+    const test = tools.getWinsenLuhe(props[0], props[1]);
 
     assert.equal(test, props[2], 'There is something going wrong ...');
   });
 
   it('KAK should be KANSEN (KUHE)', () => {
     const props = ['WINSEN (LUHE)', 'KAK', 'KANSEN (KUHE)'];
-    const test = tools.getStop(props[0], props[1]);
+    const test = tools.getWinsenLuhe(props[0], props[1]);
 
     assert.equal(test, props[2], 'There is something going wrong ...');
   });
 
   it('KKA should be KIKSEN (LAHE)', () => {
     const props = ['WINSEN (LUHE)', 'KKA', 'KIKSEN (LAHE)'];
-    const test = tools.getStop(props[0], props[1]);
+    const test = tools.getWinsenLuhe(props[0], props[1]);
 
     assert.equal(test, props[2], 'There is something going wrong ...');
   });
 
   it('KKK should be KIKSEN (KUHE)', () => {
     const props = ['WINSEN (LUHE)', 'KKK', 'KIKSEN (KUHE)'];
-    const test = tools.getStop(props[0], props[1]);
+    const test = tools.getWinsenLuhe(props[0], props[1]);
 
     assert.equal(test, props[2], 'There is something going wrong ...');
   });
 
 });
 
-describe('Tests for tools.getStop-function for error-case.', () => {
+describe('Tests for tools.getWinsenLuhe-function for error-case.', () => {
 
   it('AAAA should be "Eingabe zu lang.', () => {
     const props = ['WINSEN (LUHE)', 'AAAA', 'Eingabe zu lang.'];
-    const test = tools.getStop(props[0], props[1]);
+    const test = tools.getWinsenLuhe(props[0], props[1]);
 
     assert.equal(test, props[2], 'There is something going wrong ...');
   });
