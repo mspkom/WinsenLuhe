@@ -87,7 +87,7 @@ describe('Tests for tools.getWinsenLuhe-function for single input.', () => {
 
 describe('Tests for tools.getWinsenLuhe-function for double input.', () => {
 
-  it('AA should be WANSEN (WAHE)', () => {
+  it('AA should be WANSEN (LAHE)', () => {
     const props = ['WINSEN (LUHE)', 'AA', 'WANSEN (LAHE)'];
     const test = tools.getWinsenLuhe(props[0], props[1]);
 
@@ -117,6 +117,17 @@ describe('Tests for tools.getWinsenLuhe-function for double input.', () => {
 
   it('KO should be KINSEN (LOHE)', () => {
     const props = ['WINSEN (LUHE)', 'KO', 'KINSEN (LOHE)'];
+    const test = tools.getWinsenLuhe(props[0], props[1]);
+
+    assert.equal(test, props[2], 'There is something going wrong ...');
+  });
+
+});
+
+describe('Tests for tools.getWinsenLuhe-function for special input.', () => {
+
+  it('WL should be WINSEN (LuHE)', () => {
+    const props = ['WINSEN (LUHE)', 'AA', 'WANSEN (LUHE)'];
     const test = tools.getWinsenLuhe(props[0], props[1]);
 
     assert.equal(test, props[2], 'There is something going wrong ...');
