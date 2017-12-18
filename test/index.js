@@ -87,7 +87,7 @@ describe('Tests for tools.getWinsenLuhe-function for single input.', () => {
 
 describe('Tests for tools.getWinsenLuhe-function for double input.', () => {
 
-  it('AA should be LANSEN (WAHE)', () => {
+  it('AA should be WANSEN (WAHE)', () => {
     const props = ['WINSEN (LUHE)', 'AA', 'WANSEN (LAHE)'];
     const test = tools.getWinsenLuhe(props[0], props[1]);
 
