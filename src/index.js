@@ -1,5 +1,4 @@
-console.log('src -> index');
-var { getWinsenLuhe } = require('./tools');
+const { getWinsenLuhe } = require('./tools');
 
 module.exports = {
   getWinsenLuhe,
