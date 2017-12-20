@@ -69,7 +69,7 @@ describe('Tests for tools.joinValue-function.', () => {
 
 describe('Tests for tools.getWinsenLuhe-function for single input.', () => {
 
-  it('A should be LANSEN (WAHE)', () => {
+  it('A should be WANSAN (LAHE)', () => {
     const props = ['WINSEN (LUHE)', 'A', 'WANSEN (LAHE)'];
     const test = tools.getWinsenLuhe(props[0], props[1]);
 
@@ -87,7 +87,7 @@ describe('Tests for tools.getWinsenLuhe-function for single input.', () => {
 
 describe('Tests for tools.getWinsenLuhe-function for double input.', () => {
 
-  it('AA should be LANSEN (WAHE)', () => {
+  it('AA should be WANSAN (LAHE)', () => {
     const props = ['WINSEN (LUHE)', 'AA', 'WANSEN (LAHE)'];
     const test = tools.getWinsenLuhe(props[0], props[1]);
 
@@ -101,7 +101,7 @@ describe('Tests for tools.getWinsenLuhe-function for double input.', () => {
     assert.equal(test, props[2], 'There is something going wrong ...');
   });
 
-  it('OÖ should be LONSEN (WÖHE)', () => {
+  it('OÖ should be WONSEN (LÖHE)', () => {
     const props = ['WINSEN (LUHE)', 'OÖ', 'WONSEN (LÖHE)'];
     const test = tools.getWinsenLuhe(props[0], props[1]);
 
@@ -124,9 +124,20 @@ describe('Tests for tools.getWinsenLuhe-function for double input.', () => {
 
 });
 
+describe('Tests for tools.getWinsenLuhe-function for special double input.', () => {
+
+  it('WL should be WUNDERLAND', () => {
+    const props = ['WINSEN (LUHE)', 'WL', 'WUNDERLAND'];
+    const test = tools.getWinsenLuhe(props[0], props[1]);
+
+    assert.equal(test, props[2], 'There is something going wrong ...');
+  });
+
+});
+
 describe('Tests for tools.getWinsenLuhe-function for tripple input.', () => {
 
-  it('AAA should be LANSAN (WAHE)', () => {
+  it('AAA should be WANSAN (LAHE)', () => {
     const props = ['WINSEN (LUHE)', 'AAA', 'WANSAN (LAHE)'];
     const test = tools.getWinsenLuhe(props[0], props[1]);
 

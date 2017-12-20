@@ -97,6 +97,10 @@ module.exports = {
     const startArr = this.splitValue(start);
     const valArr = this.splitValue(val);
 
+    if (val === 'WL') {
+      return 'WUNDERLAND';
+    }
+
     if (val.length === 1) {
       this.changeOne(startArr, val);
     }
